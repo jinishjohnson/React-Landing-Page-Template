@@ -1,0 +1,42 @@
+.team-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  white-space: nowrap;
+}
+
+.carousel-track .team {
+  flex: 0 0 auto;
+  margin: 10px;
+}
+
+.team-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.team-carousel {
+  overflow: hidden; /* Hide the overflow to show only one row of images */
+  white-space: nowrap; /* Prevent wrapping */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.1s linear;
+  will-change: transform; /* Optimize rendering performance */
+}
+
+.team {
+  flex: 0 0 25%; /* Ensure each item takes up 25% of the row */
+  box-sizing: border-box;
+}
+
+.team-img {
+  max-width: 100%;
+  display: block;
+}

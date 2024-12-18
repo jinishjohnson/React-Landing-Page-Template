@@ -108,7 +108,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #eb6003 0%, #eb6003 100%)!important;
   content: "";
   transition: width 0.2s;
 }
@@ -129,7 +129,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
+  background: linear-gradient(to right, #eb6003 0%, #eb6003 100%)!important;
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -144,24 +144,29 @@ hr {
 .navbar-default .navbar-toggle:hover > .icon-bar {
   background-color: #608dfd;
 }
+.logoheader{
+  margin-top: -33px;
+}
 .section-title {
   margin-bottom: 70px;
+  
 }
 .section-title h2 {
   position: relative;
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
+  text-transform: capitalize;
 }
 .section-title h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+   background: linear-gradient(to right, #eb6003 0%, #eb6003 100%)!important;
   height: 4px;
-  width: 60px;
+  width: 130px;
   bottom: 0;
-  margin-left: -30px;
-  left: 50%;
+  margin-left: 11px;
+  left: 42%;
 }
 .section-title p {
   font-size: 18px;
@@ -171,7 +176,7 @@ hr {
   text-transform: uppercase;
   color: #fff;
   background-color: #5ca9fb;
-  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, #eb6003 0%, #eb6003 100%)!important;
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -211,6 +216,7 @@ a:focus,
 .intro {
   display: table;
   width: 100%;
+  height: 100%;
   padding: 0;
   background: url(../img/header/hero1.jpg) center center no-repeat;
   background-color: #e5e5e5;
@@ -218,6 +224,7 @@ a:focus,
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  position: relative;
 }
 .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
@@ -236,9 +243,11 @@ a:focus,
   color: #5ca9fb;
 }
 .intro p {
+  position: absolute;
+  bottom: 0;
   color: #fff;
-  font-size: 22px;
-  font-weight: 300;
+  font-size: 4rem;
+  font-weight: 500;
   line-height: 30px;
   margin: 0 auto;
   margin-bottom: 60px;
@@ -276,7 +285,7 @@ header .intro-text {
   position: relative;
   margin-bottom: 15px;
   padding-bottom: 15px;
-  font-size: 7rem;
+  font-size: 4rem;
   text-transform: capitalize;
 }
 #about h2::after {
@@ -284,7 +293,7 @@ header .intro-text {
   content: "";
   background: linear-gradient(to right, #eb6003 0%, #eb6003 100%);
   height: 4px;
-  width: 60px;
+  width: 139px;
   bottom: 0;
   left: 0;
 }
@@ -319,46 +328,73 @@ header .intro-text {
 /* Services Section */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background-image: linear-gradient(
+  180deg,
+  hsl(0deg 0% 100%) 0%,
+  hsl(0deg 0% 98%) 10%,
+  hsl(0deg 0% 95%) 30%,
+  hsl(0deg 0% 92%) 50%,
+  hsl(0deg 0% 90%) 70%,
+  hsl(0deg 0% 87%) 100%
+);
+
   color: #fff;
 }
 #services .service-desc {
   margin: 10px 10px 20px;
 }
 #services h2 {
-  color: #fff;
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #000000;
 }
 #services .section-title h2::after {
   position: absolute;
   content: "";
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to right, #eb6003 0%, #eb6003 100%)!important;
   height: 4px;
-  width: 60px;
+  width: 140px;
   bottom: 0;
-  margin-left: -30px;
-  left: 50%;
+  margin-left: 20px;
+  left: 40%;
 }
-#services i.fa {
-  font-size: 42px;
-  width: 120px;
-  height: 120px;
-  padding: 40px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-  border-radius: 50%;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  gap: 20;
+}
+.items{
+  background-color: #000;
+  width: 500px;
+  height: 450px;
+  text-align: start;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.caption{
+  font-size: 1.8rem;
+}
+.Card-heading{
+  font-size: 3rem;
+  padding-bottom: 15px;
+}
+.Card-btn{
+  margin-top: 20px;
+  padding:2px 10px;
+  background-color:#F08742;
+  border-width: 0;
+  border-radius: 8px;
+
+}
+
+.card-container p,.card-container h3{
   color: #fff;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+
 }
-#services h3 {
-  font-weight: 500;
-  padding: 5px 0;
-  color: #fff;
-}
-#services p {
-  color: rgba(255, 255, 255, 0.75);
-}
-#services .service-desc {
-  margin-bottom: 40px;
-}
+
 /* Portfolio Section */
 #portfolio {
   padding: 100px 0;
@@ -411,13 +447,152 @@ header .intro-text {
 /* Testimonials Section */
 #testimonials {
   padding: 100px 0;
-  background: #f6f6f6;
+  background: #000;
 }
-#testimonials i {
-  color: #e6e6e6;
-  font-size: 32px;
-  margin-bottom: 20px;
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth swipe effect */
+  will-change: transform;
+}
+
+.Service-card {
+  flex: 0 0 31.33%; /* 3 cards per row */
+  box-sizing: border-box;
+  background-color: #FD801A;
+  width: 150px;
+  height: 450px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.card-img {
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.card-content {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.button-card {
+  background-color: #fff;
+  color: #000;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Dot navigation */
+.dot-navigation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #FD801A;
+
+}
+/* gallery */
+#portfolio{
+  padding: 20px 0;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.portfolio-items .col-12, .portfolio-items .col-sm-4, .portfolio-items .col-md-4, .portfolio-items .col-lg-4 {
+  padding: 0; /* Remove padding from columns */
+}
+
+.portfolio-items img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-items img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .portfolio-items .col-md-4 {
+    flex: 0 0 48%; /* 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-items .col-sm-4 {
+    flex: 0 0 48%; /* 2 items per row on small screens */
+  }
+}
+
+@media (max-width: 575px) {
+  .portfolio-items .col-12 {
+    flex: 0 0 100%; /* 1 item per row on very small screens */
+  }
+}
+
+/* Lightbox specific styles */
+.ReactImageLightbox__overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactImageLightbox__button--close {
+  top: 20px;
+  right: 20px;
+}
+
+.ReactImageLightbox__button--next,
+.ReactImageLightbox__button--prev {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.ReactImageLightbox__button--next {
+  right: 20px;
+}
+
+.ReactImageLightbox__button--prev {
+  left: 20px;
+}
+
+
 .testimonial {
   position: relative;
   padding: 20px;
@@ -451,10 +626,32 @@ header .intro-text {
 /* Team Section */
 #team {
   padding: 100px 0;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(0deg 0% 98%) 10%,
+    hsl(0deg 0% 95%) 30%,
+    hsl(0deg 0% 92%) 50%,
+    hsl(0deg 0% 90%) 70%,
+    hsl(0deg 0% 87%) 100%
+  );
+  
+  color: #fff;
+
 }
 #team h4 {
   margin: 5px 0;
 }
+.team-img {
+  width: 100%;
+  height: auto;
+}
+.thumbnail {
+  text-align: center;
+  padding: 15px;
+}
+
+
 #team .team-img {
   width: 240px;
 }
@@ -468,30 +665,33 @@ header .intro-text {
 }
 /* Contact Section */
 #contact {
-  padding: 100px 0 60px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  padding:40px 30px;
+  /* background-color:black; */
   color: rgba(255, 255, 255, 0.75);
 }
 #contact .section-title {
   margin-bottom: 40px;
+
 }
 #contact .section-title p {
-  font-size: 16px;
+  font-size: 5rem;
 }
 #contact h2 {
   color: #fff;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 15px;
   padding-bottom: 15px;
+  font-weight: 400;
+  font-size:4rem;
 }
-#contact .section-title h2::after {
+#contact  h2::after {
   position: absolute;
   content: "";
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to right, #eb6003 0%, #eb6003 100%);
   height: 4px;
-  width: 60px;
+  width: 160px;
   bottom: 0;
-  left: 30px;
+  left: 20px;
 }
 #contact h3 {
   color: #fff;
@@ -513,7 +713,7 @@ header .intro-text {
   border: 2px solid #fff;
 }
 #contact .btn-custom:hover {
-  color: #1f386e;
+  color: #6e451f;
   background: #fff;
 }
 label {
@@ -593,20 +793,7 @@ label {
   background: #fff;
 }
 /* Footer Section*/
-#footer {
-  background: #f6f6f6;
-  padding: 30px 0;
-}
-#footer p {
-  color: #888;
-  font-size: 14px;
-}
-#footer a {
-  color: #608dfd;
-}
-#footer a:hover {
-  border-bottom: 2px solid #608dfd;
-}
+
 
 @media (max-width: 768px) {
   #about img {

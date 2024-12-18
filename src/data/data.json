@@ -1,7 +1,8 @@
 {
   "Header": {
     "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.",
+    "logo": "img/navigation/logo.jpg"
   },
   "About": {
     "paragraph": "Dhiya Signages stands as the new benchmark in the signage industry, redefining how brands communicate with their audience. Vibrant, innovative, and forward-thinking, we are dedicated to elevating businesses by delivering premium signage solutions that go beyond expectations.",
@@ -119,6 +120,16 @@
     }
   ],
   "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
     {
       "img": "img/team/01.jpg",
       "name": "John Doe",

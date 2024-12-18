@@ -1,6 +1,9 @@
 import React from "react";
 
+
 export const Navigation = (props) => {
+  const { data } = props;
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -11,15 +14,20 @@ export const Navigation = (props) => {
             data-toggle="collapse"
             data-target="#bs-example-navbar-collapse-1"
           >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
+            <span className="sr-only">Toggle navigation</span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            DhiyaSigns
-          </a>{" "}
+            <img
+            className="logoheader"
+              src="/img/navigation/logo.png"
+              alt="Logo"
+              width={150}
+              height={80}
+            />
+          </a>
         </div>
 
         <div
