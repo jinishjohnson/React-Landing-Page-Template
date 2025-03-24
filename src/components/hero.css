@@ -1,0 +1,25 @@
+/* Mobile-specific styling */
+@media (max-width: 418px) {
+    .m-hero-carousel {
+      display: block; /* Show on mobile */
+    }
+  
+    .m-hero-carousel img {
+      width: 100%; /* Make the images responsive */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure images cover the container */
+      transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+    }
+  
+    .m-hero-carousel img:not(.active) {
+      opacity: 0; /* Hide non-active images */
+    }
+  }
+  
+  /* Hide the carousel on desktop and larger devices */
+  @media (min-width: 992px) {
+    .m-hero-carousel {
+      display: none; /* Hide carousel on desktop and larger devices */
+    }
+  }
+  

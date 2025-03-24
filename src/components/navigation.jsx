@@ -1,8 +1,9 @@
 import React from "react";
+import "./navigation.css"
 
 
 export const Navigation = (props) => {
-  const { data } = props;
+ 
 
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -22,9 +23,9 @@ export const Navigation = (props) => {
           <a className="navbar-brand page-scroll" href="#page-top">
             <img
             className="logoheader"
-              src="/img/navigation/logo.png"
+              src="/img/navigation/dhiya-logo.svg"
               alt="Logo"
-              width={150}
+              width={250}
               height={80}
             />
           </a>

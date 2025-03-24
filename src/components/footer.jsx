@@ -28,7 +28,12 @@ const footerData = [
 export const Footer = () => {
   return (
     <div className="footer-container">
-      <div className="container">
+      {/* Add the image on the left side */}
+      <div className="footer-logo">
+        <img src="./img/navigation/dhiya-logo.svg" alt="Logo"  />
+      </div>
+
+      <div className="f-container">
         <div className="row-footer">
           {footerData.map((section) => (
             <div className="footer-col" key={section.id}>

@@ -1,57 +1,104 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './testimonial.css'; // Assuming you're separating styles
+//images//
+// import cardimg1 from "../"
 
-const testimonialsData = [
-  { id: 1, img: "https://w7.pngwing.com/pngs/226/722/png-transparent-gallery-image-icon.png", title: "Card Title 1", content: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet." },
-  { id: 2, img: "https://w7.pngwing.com/pngs/226/722/png-transparent-gallery-image-icon.png", title: "Card Title 2", content: "Fugiat saepe nihil optio eaque.Lorem ipsum dolor sit amet." },
-  { id: 3, img: "https://w7.pngwing.com/pngs/226/722/png-transparent-gallery-image-icon.png", title: "Card Title 3", content: "Error maxime autem ullamLorem ipsum dolor sit amet.." },
-  { id: 4, img: "https://w7.pngwing.com/pngs/226/722/png-transparent-gallery-image-icon.png", title: "Card Title 4", content: "Perspiciatis velit rem enim.Lorem ipsum dolor sit amet." },
-  { id: 5, img: "https://w7.pngwing.com/pngs/226/722/png-transparent-gallery-image-icon.png", title: "Card Title 5", content: "Adipisci nec volutpat ipsum.Lorem ipsum dolor sit amet." },
-  { id: 6, img: "https://w7.pngwing.com/pngs/226/722/png-transparent-gallery-image-icon.png", title: "Card Title 6", content: "Ipsum rem veniam minima.Lorem ipsum dolor sit amet." }
-];
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const horizontalRef = useRef(null);
 
-  const itemsPerPage = 3;
-  const totalSlides = Math.ceil(testimonialsData.length / itemsPerPage);
+  useEffect(() => {
+    const horizontalSection = horizontalRef.current;
 
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
-  };
+    if (horizontalSection) {
+      gsap.to(horizontalSection, {
+        x: () => horizontalSection.scrollWidth * -1,
+        xPercent: 100,
+        scrollTrigger: {
+          trigger: horizontalSection,
+          start: 'center center',
+          end: '+=2000px',
+          pin: horizontalSection.parentNode,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      });
+    }
+  }, []);
+
+  const cardData = [
+    {
+      title: "Signages interior & Exterior",
+      image: "/img/CardImages/Signages.jpg",
+      description: "We provide high-quality, customizable displays for any space, both interior and exterior.Interior displays engage your audience with your services, while exterior displays attract customers’ attention to your offerings.",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Digital Signsages",
+      image: "/img/CardImages/Digital.jpg",
+      description: "We provide smart, simple, and effective digital signage solutions for your business, including digital screens, LED displays, interactive kiosks, and video walls.",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Gateway Signages",
+      image: "/img/CardImages/GatewaySignages.jpg",
+      description: "Essential elements of site planning and wayfinding systems. Designed to be highly visible, durable, and convey clear and concise information to users. ",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Exhibition Stalls",
+      image: "/img/CardImages/Exhibition.jpg",
+      description: "Boost Your Brand with  our Attractive Exhibition Stalls!Use space wisely, grab attention, and keep costs low.",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Mementos",
+      image: "/img/CardImages/Mementos.jpg",
+      description: "These custom-made mementos, crafted with precision and personalized details, are perfect for commemorating achievements and honoring special individuals.",
+      buttonText: "Learn More",
+    },
+    // {
+    //   title: "Corporate Branding",
+    //   image: "https://via.placeholder.com/150",
+    //   description: "This is a description for Card 5. Explore more details about it.",
+    //   buttonText: "Learn More",
+    // },
+    {
+      title: "Bus stop Branding",
+      image: "/img/CardImages/Bustop.jpg",
+      description: "You can brand your business at high-traffic locations through  our bus stop ads. It's highly effective and visible. We offer customized ad solutions to enhance your brand presence.",
+      buttonText: "Learn More",
+    },
+  ];
 
   return (
-    <div id="testimonials">
-      <div className="container">
-        <div className="section-title text-center">
-          <h2 style={{ color: "white" }}>Other Services</h2>
-        </div>
-        <div className="carousel-wrapper">
-          <div
-            className="carousel-track"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {testimonialsData.map((testimonial) => (
-              <div className="Service-card" key={testimonial.id}>
-                <img className="card-img" src={testimonial.img} alt={testimonial.title} width={100} height={100} />
-                <h4 className="card-title">{testimonial.title}</h4>
-                <p className="card-content">{testimonial.content}</p>
-                <button className="button-card">Get in Touch</button>
+    <div>
+      <section className="intro">
+        <h1 className='into-title'>Explore Our Next Generation Sign Board</h1>
+      </section>
+
+      <section id="horizontal-scoll">
+        <div className="horizontal-scoll-wrapper">
+          <div className="horizontal" ref={horizontalRef}>
+            {cardData.map((card, index) => (
+              <div key={index}>
+                <div className="card">
+                  <img src={card.image} alt={`${card.title}`} className="card-image" />
+                  <h2 className='card-tle'>{card.title}</h2>
+                  <p className="card-description">{card.description}</p>
+                  <button className="card-button">{card.buttonText}</button>
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <div className="dot-navigation">
-          {Array(totalSlides)
-            .fill()
-            .map((_, index) => (
-              <span
-                key={index}
-                className={`dot ${index === currentIndex ? "active" : ""}`}
-                onClick={() => handleDotClick(index)}
-              ></span>
-            ))}
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

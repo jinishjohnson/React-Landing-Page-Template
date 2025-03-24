@@ -1,4 +1,5 @@
 import React from "react";
+import "./sevices.css";
 
 const serviceData = [
   {
@@ -7,15 +8,15 @@ const serviceData = [
     caption: "Quality Craftsmanship",
     description:
       "Our sign board manufacturing capabilities span a wide range of products, from digital displays to custom-designed gateway signages, ensuring we can cater to all your signage requirements.",
-      btn: "Learn More",
+    btn: "Learn More",
   },
   {
     id: 2,
     heading: "Expertise in Branding",
     caption: "Tailored Solutions",
     description:
-      "Whether you need eye-catching promotional products, impactful corporate branding, or innovative LED displays, our team has the expertise to bring your vision to life and elevate your brand'spresence",
-      btn: "Explore Our Offerings",
+      "Whether you need eye-catching promotional products, impactful corporate branding, or innovative LED displays, our team has the expertise to bring your vision to life and elevate your brand's presence",
+    btn: "Explore Our Offerings",
 
   },
 ];

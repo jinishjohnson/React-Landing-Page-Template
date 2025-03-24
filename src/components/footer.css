@@ -1,112 +1,153 @@
 /* Main Footer */
 .footer-container {
-  background-color: #eae8e9;
-  color: #fff;
-  padding: 40px 0;
-  font-family: Arial, sans-serif;
-  width: 100%; /* Stretch across the full width */
-}
-
-.footer-container .container {
+  background-color: #eae8e9; /* Background color for the main footer */
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.footer-container .row-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%; /* Ensure full stretch */
-}
-
-.footer-container .footer-col-3 {
-  flex: 1 1 calc(25% - 30px);
-  min-width: 200px;
-}
-
-.logo-section .footer-logo {
-  width: 320px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.footer-container h5 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #f0f0f0;
-  text-transform: uppercase;
-}
-
-.footer-container ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-container ul li {
-  margin-bottom: 10px;
-  color: #ccc;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.footer-container ul li:hover {
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Secondary Footer */
-.footer-container2 {
-  width: 100%;
-  background: #fd801a;
-  padding: 10px 20px;
-}
-
-.footer-container2 .footersec {
-  display: flex;
-  justify-content: space-between; /* Space between left and right items */
   align-items: center;
+  padding: 20px;
+  flex-wrap: wrap; /* Ensure the content wraps for smaller screens */
 }
 
-.footer-container2 .footer-left {
-  color: #fff;
-  font-size: 14px;
+/* Logo section */
+.footer-logo {
+  flex: 1;
+  text-align: left;
+  margin-bottom: 20px; /* Adds spacing for mobile layout */
 }
 
-.footer-container2 .footer-right {
-  color: #fff;
-  font-size: 14px;
+.footer-logo img {
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+  margin-left: 40px;
 }
+
+/* Footer columns (Quick Links, Our Services, etc.) */
+.f-container {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-col {
+  padding: 10px;
+  margin-left: 20px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-col h5 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-col ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
 .footer-col a {
-  color: #fff;
   text-decoration: none;
-  padding: 5px 10px;
-  transition: color 0.3s;
+  color: #000; /* Default text color */
 }
 
 .footer-col a:hover {
-  color: #f0f0f0; /* Change color on hover */
+  color: #0056b3; /* Hover color for links */
 }
 
+/* Footer 2 - Bottom Section */
+.footer-container2 {
+  background-color: orange; /* Orange background for the footer 2 */
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .footer-container .row-footer {
+.footersec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left, .footer-right {
+  color: #fff; /* White text color */
+  margin: 0;
+}
+
+.footer-left {
+  font-size: 0.9rem;
+}
+
+.footer-right {
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Main footer container will stack vertically */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding for mobile */
+  }
+
+  /* Logo section will take full width */
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Footer columns will stack vertically */
+  .f-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .footer-container .footer-col-3 {
+  /* Footer columns (Quick Links, Our Services, etc.) will be centered */
+  .row-footer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-col {
+    margin-left: 0;
     margin-bottom: 20px;
     text-align: center;
+    padding: 0 10px;
+    width: 100%;
   }
 
-  .logo-section {
+  .footer-col h5 {
+    margin-bottom: 10px;
+  }
+
+  .footersec {
+    flex-direction: column;
     text-align: center;
   }
 
-  .footer-container2 .footersec {
-    flex-direction: column; /* Stack in small screens */
+  .footer-left,
+  .footer-right {
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+
+  /* Adjust the "powered by" section */
+  .footer-right {
     text-align: center;
   }
 }

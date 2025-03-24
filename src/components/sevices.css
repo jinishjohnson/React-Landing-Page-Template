@@ -1,0 +1,159 @@
+/* Services Section */
+#services {
+    padding: 50px 0;
+    background-image: linear-gradient(
+      180deg,
+      hsl(0deg 0% 100%) 0%,
+      hsl(0deg 0% 98%) 10%,
+      hsl(0deg 0% 95%) 30%,
+      hsl(0deg 0% 92%) 50%,
+      hsl(0deg 0% 90%) 70%,
+      hsl(0deg 0% 87%) 100%
+    );
+    color: #fff;
+  }
+  
+  #services .service-desc {
+    margin: 10px 10px 20px;
+  }
+  
+  #services h2 {
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  
+  #services .section-title h2::after {
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, #eb6003 0%, #eb6003 100%)!important;
+    height: 4px;
+    width: 140px;
+    bottom: 0;
+    margin-left: 20px;
+    left: 40%;
+  }
+  
+  /* Card container */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    gap: 20px;
+  }
+  
+  .items {
+    background-color: #000;
+    width: 500px;
+    height: 450px;
+    text-align: start;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .caption {
+    font-size: 1.8rem;
+  }
+  
+  .Card-heading {
+    font-size: 3rem;
+    padding-bottom: 15px;
+  }
+  
+  .Card-btn {
+    margin-top: 20px;
+    padding: 2px 10px;
+    background-color: #F08742;
+    border-width: 0;
+    border-radius: 8px;
+  }
+  
+  .card-container p,
+  .card-container h3 {
+    color: #fff;
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    #services {
+      padding: 60px 0;
+    }
+  
+    #services h2 {
+      font-size: 2.5rem; /* Adjusted for smaller screen */
+    }
+  
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .items {
+      width: 90%; /* Make the items take more width on mobile */
+      height: auto; /* Let the height adjust accordingly */
+      padding-top: 50px; /* Adjust padding for mobile */
+      padding-left: 20px; /* Adjust padding */
+      padding-right: 20px;
+    }
+  
+    .Card-heading {
+      font-size: 2.5rem; /* Adjust card heading size */
+    }
+  
+    .caption {
+      font-size: 1.5rem; /* Adjust caption font size */
+    }
+  
+    .Card-btn {
+      padding: 8px 20px; /* Adjust button size for mobile */
+    }
+  
+    .card-container p,
+    .card-container h3 {
+      font-size: 1.4rem; /* Adjust text size for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #services {
+      padding: 40px 0; /* Further reduce padding for very small screens */
+    }
+  
+    #services h2 {
+      font-size: 2rem; /* Make the title even smaller */
+    }
+  
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .items {
+      width: 100%; /* Full width on very small screens */
+      height: auto;
+      padding-top: 40px; /* Adjust padding */
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .Card-heading {
+      font-size: 2rem; /* Adjust heading size */
+    }
+  
+    .caption {
+      font-size: 1.4rem; /* Adjust caption for smaller screens */
+    }
+  
+    .Card-btn {
+      padding: 6px 15px; /* Make button more compact */
+    }
+  
+    .card-container p,
+    .card-container h3 {
+      font-size: 1.2rem; /* Adjust text for smaller screens */
+    }
+  }
+  
